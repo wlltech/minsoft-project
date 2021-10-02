@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffe Shop</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h2>Registro de Ventas</h2>
+        </header>
+        <div class="sale-state">
+            <button type="button" class="btn btn-new-sale" data-toggle="button">
+                Nueva Venta
+            </button>
+            <button type="button" class="btn btn-search" data-toggle="button">
+                Buscar
+            </button>
+            <button type="button" class="btn btn-actualizer" data-toggle="button">
+                Actualizar
+            </button>
+        </div>
+        <div class="sale-data">
+            <div class="seller-label "> <label for="seller" class="col-form-label ">Vendedor: </label> </div>
+            <select type="dropdown" class="seller form-control" id="seller" placeholder="Vendedor" autofocus>
+                <option>Elija el vendedor</option>
+            </select>
+
+            <div class="client-label"><label for="client" class="col-form-label">Id. Cliente: </label> </div>
+
+            <div class="client">
+                <input type="text" class="form-control" id="client" placeholder="Id. Cliente">
+            </div>
+            <div class="name-label"><label for="name-client" class="col-form-label">Nombre Cliente: </label></div>
+            <div class="name">
+                <input type="text" class="form-control" id="name-client" placeholder="Nombre del Cliente">
+            </div>
+            <div class="product-label"><label for="id-product" class="col-form-label">Producto: </label></div>
+            <select type="dropdown" class="product form-control" id="id-product" placeholder="Id. Producto">
+                <option>Id. Producto</option>
+            </select>
+            <div class="amount-label"><label for="amount" class="col-form-label">Cantidad: </label></div>
+            <div class="amount">
+                <input type="text" class="form-control" id="amount" placeholder="Cantidad">
+            </div>
+            <div class="finished">
+                <button type="button" class="btn btn-actualizer" data-toggle="button">
+                    Finalizar
+                </button>
+            </div>
+            <div class="save-product">
+                <button type="button" class="btn btn-actualizer" data-toggle="button">
+                    Agregar Producto
+                </button>
+            </div>
+        </div>
+        <div class="data-factura">
+            <section class="section-header">
+                <h4 class="section-title">Coffee Shop</h4>
+                <img class="logo" src="images/favicon.png" alt="logo"></img>
+                <div class="date-label"> <label for="date" class="date-label">Fecha: </label></div>
+                <div class="date"><input type="date" class="form-control" min="2021-10-01" max="2100-04-28" step="1"></div>
+                <div class="sell-id-label"> <label for="sell-id" class="date-label">Id. Venta </label></div>
+                <div class="sell-id"><input type="text" id="sell-id" class="form-control" ></div>
+                <div class="seller-label"> <label for="seller" class="seller-label" >Vendedor </label></div>
+                <div class="seller"><input type="text" id="seller" class="form-control" ></div>
+            </section>
+        </div>
+        <footer class="footer">
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
