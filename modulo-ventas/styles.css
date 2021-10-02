@@ -33,7 +33,7 @@ body {
 .container .sale-state {
 
     border-radius: 4px;
-    grid-column: 1 / 4;
+    grid-column: 1 / 3;
     grid-row: 2 / 3;
     display: grid;
     grid-gap: 1px;
@@ -56,7 +56,7 @@ body {
     cursor: pointer;
 }
 
-.container .sale-data .finished>button{
+.container .sale-data .finished>button {
     background: navy;
 }
 
@@ -72,8 +72,8 @@ body {
 .container .sale-data {
     border-radius: 4px;
     grid-gap: 1px;
-    grid-column: 1 / 4;
-    grid-row: 3 / 5 ;
+    grid-column: 1 / 3;
+    grid-row: 3 / 5;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(6, auto);
@@ -189,9 +189,9 @@ body {
     grid-gap: 1px;
     align-items: center;
     text-align: center;
-} 
+}
 
-.container .sale-data .save-product{
+.container .sale-data .save-product {
     border-radius: 4px;
     grid-column: 5 / 6;
     grid-row: 4 / 6;
@@ -204,12 +204,12 @@ body {
 .data-factura {
     border-radius: 4px;
     grid-gap: 1px;
-    grid-column: 4 / -1;
+    grid-column: 3 / -1;
     grid-row: 2 / -1;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(5, auto);
-    align-items: center;  
+    align-items: center;
 }
 
 .data-factura .section-header {
@@ -219,7 +219,7 @@ body {
     display: inline-block;
     grid-gap: 1px;
     align-items: center;
-    text-align:center;
+    text-align: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -234,22 +234,22 @@ body {
     align-items: center;
     text-align: center;
     font-weight: 500;
-    background:rgb(226, 85, 30);
-    color:rgb(255, 255, 255);
+    background: rgb(226, 85, 30);
+    color: rgb(255, 255, 255);
 
 }
 
-.data-factura .section-header .logo { 
-min-height: 16px;
-max-height: 32px;
-min-width: 16px;
-max-width: 32;
-border-radius: 2px;
-margin:auto;
-float: center;
-grid-column: 4 / 5;
-grid-row: 1 / 2;
-display: block;
+.data-factura .section-header .logo {
+    min-height: 16px;
+    max-height: 32px;
+    min-width: 16px;
+    max-width: 32;
+    border-radius: 2px;
+    margin: auto;
+    float: center;
+    grid-column: 4 / 5;
+    grid-row: 1 / 2;
+    display: block;
 }
 
 .data-factura .section-header .date-label {
@@ -269,18 +269,18 @@ display: block;
     grid-row: 2 / 3;
     display: inline-flex;
     grid-gap: 1px;
-    align-items:left;
+    align-items: left;
     text-align: left;
     font-weight: 500;
 }
 
-.data-factura .section-header .sell-id-label{
+.data-factura .section-header .sell-id-label {
     border-radius: 6px;
     grid-column: 1 / 3;
     grid-row: 3 / 4;
     display: inline-flex;
     grid-gap: 1px;
-    align-items:center;
+    align-items: center;
     text-align: center;
     font-weight: 500;
 }
@@ -291,7 +291,7 @@ display: block;
     grid-row: 4 / 5;
     display: inline;
     grid-gap: 1px;
-    align-items:center;
+    align-items: center;
     text-align: center;
     font-weight: 500;
 }
@@ -302,7 +302,7 @@ display: block;
     grid-row: 3 / 4;
     display: inline-flex;
     grid-gap: 1px;
-    align-items:center;
+    align-items: center;
     text-align: center;
     font-weight: 500;
 }
@@ -313,14 +313,35 @@ display: block;
     grid-row: 4 / 5;
     display: inline-flex;
     grid-gap: 1px;
-    align-items:center;
+    align-items: center;
     text-align: center;
     font-weight: 500;
 }
+
+.section-sell {
+    border-radius: 6px;
+    grid-column: 1 / -1;
+    grid-row: 2 / 6;
+    display: inline-block;
+    height: 100%;
+    font-weight: 500;
+}
+
+.section-sell .sell-title {
+    text-align: center;
+}
+
+.section-sell .sell-table {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    font-weight: 500;
+}
+
 .container>footer {
     background: rgb(226, 85, 30);
     padding: 5px;
     border-radius: 4px;
-    grid-column: 1 / -1;
+    grid-column: 1 / 3;
     grid-row: 5 / -1;
 }
