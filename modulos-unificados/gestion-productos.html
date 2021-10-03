@@ -1,22 +1,45 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <!-- _head.php -->
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Coffe Shop</title>
-        <!-- Bootstrap CSS -->
-        <link href="appclient/css/bootstrap-4.1.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="icon" href="appclient/css/images/favicon.png" type="image/png">
-        <link href="appclient/css/style.css" rel="stylesheet" type="text/css"/>
-        <link rel="icon" href="images/favicon.png" type="image/png">
-    </head>
-    <body>
-          <!-- nav_horizontal.php -->
-        <div id="myMenu">
+
+<head>
+    <!-- _head.php -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Coffe Shop</title>
+    <!-- Bootstrap CSS -->
+    <link href="appclient/css/bootstrap-4.1.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="appclient/css/images/favicon.png" type="image/png">
+    <link href="appclient/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="styles/navigation-styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="products-styles.css"> -->
+</head>
+
+<body>
+    <!-- nav_horizontal.php -->
+
+    <nav class="navbar-per navbar-fixed-top">
+        <span><a class="navbar-brand" href="#">
+                <img src="images/favicon.png" width="36" height="36" alt="Logo">
+            </a></span>
+        </button></span>
+        <span>
+            <a class="item" href="index.html">Home</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-productos.html">Productos</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-ventas.html">Ventas</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-usuarios.html">Usuarios</a>
+        </span>
+    </nav>
+    <!-- <div id="myMenu">
             <nav style="background-color:rgb(226, 85, 30)" class="navbar navbar-toggleable-md navbar-inverse fixed-top navbar navbar-expand-sm navbar-dark text-white" >
                 <div class="logo">
                  <img class="logo" src="appclient\css\images/favicon.png" alt="logo"></img>
@@ -36,27 +59,27 @@
                         </li>
                        
                     </ul>
-                </div> --> 
-            </nav>   
-</div>
+                </div> -->
+    <!-- </nav>   
+</div> -->
 
-              <!-- header-->
-         <header class="header">
-
+    <!-- header-->
+    <header class="header">
+<!-- 
 
         <br><br>
         <div class="jumbotron text-center bg-light" style="margin-bottom:0">
             <div class="logo1">
-                 <img class="logo1" src="appclient\css\images/favicon.png" alt="logo"></img>
+                <img class="logo1" src="appclient\css\images/favicon.png" alt="logo"></img>
             </div>
             <h1>Coffe Shop</h1>
-            <p>Descripcion del Producto</p> 
+            <p>Descripcion del Producto</p>
 
-        </div>
+        </div> -->
 
     </header>
 
-<!--
+    <!--
        
         <div id="content-msg-js">
             <div class="row">
@@ -78,75 +101,73 @@
                 </div>
             </div>
         </div>-->
-        <div class="container" style="margin-top:30px">
-            <!-- contenido principal -->
+    <div class="container" >
+        <!-- contenido principal -->
 
-             <form data-reset="true" 
-                          id="frmLogin" 
-                          action="?c=Auth"
-                          data-success="successLogin"
-                          method="POST">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="form-group">
-                            <h2>Formulario | Nuevo Producto</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-4">
+        <form data-reset="true" id="frmLogin" action="?c=Auth" data-success="successLogin" method="POST">
+            <div class="row">
+                <div class="col-sm-12">
                     <div class="form-group">
-                 <label for="codigo">Código de Producto:</label>
-                <input type="number" min="1" max="100" type="number" class="form-control" id="codigotxt" name="codigo">
+                        <h2>Formulario | Nuevo Producto</h2>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label for="nombre">Nombre del Producto:</label>
-                        <input  type="text" class="form-control" id="nombretxt" name="nombre" >
-                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="codigo">Código de Producto:</label>
+                    <input type="number" min="1" max="100" type="number" class="form-control" id="codigotxt"
+                        name="codigo">
                 </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label for="precio">Valor Unitario:</label>
-                        <input  type="number" class="form-control" id="preciotxt" name="precio">
-                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="nombre">Nombre del Producto:</label>
+                    <input type="text" class="form-control" id="nombretxt" name="nombre">
                 </div>
-                <div class="col-sm-4">
-                    <div class="form-group">
-                        <label for="existencia">Numero de Existencia:</label>
-                        <input  type="number" class="form-control" id="existenciatxt" name="existencia">
-                    </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="precio">Valor Unitario:</label>
+                    <input type="number" class="form-control" id="preciotxt" name="precio">
                 </div>
-                <div class="col-sm-4">
+            </div>
+            <div class="col-sm-4">
+                <div class="form-group">
+                    <label for="existencia">Numero de Existencia:</label>
+                    <input type="number" class="form-control" id="existenciatxt" name="existencia">
+                </div>
+            </div>
+            <div class="col-sm-4">
                 <label>Estado del Producto:</label>
-<div class="form-group has-feedback">
-<input type="radio" name="estado" id="estadotxt" >Disponible
-    <input type="radio" name="estado" id="estadotxt" >No disponible
-</div>
+                <div class="form-group has-feedback">
+                    <input type="radio" name="estado" id="estadotxt">Disponible
+                    <input type="radio" name="estado" id="estadotxt">No disponible
+                </div>
 
 
 
-<label>Imagen del producto</label>
-<input id="uploadImage1" type="file" name="txtImages" onchange="previewImage(1);" />
+                <label>Imagen del producto</label>
+                <input id="uploadImage1" type="file" name="txtImages" onchange="previewImage(1);" />
 
-<img id="uploadPreview1" width="150" height="150" src="" />
-</div>
+                <img id="uploadPreview1" width="150" height="150" src="" />
+            </div>
 
-</div>
-                <div class="row">
-                    <div class="col-sm-12">
-                        <button type="submit" class="btn btn-success" id="boton-guardar">Guardar</button>
-                        <button type="reset" class="btn btn-danger">Editar</button>
-                        <a href="index.html" class="btn btn-info">Actualizar</a>
-                        <button class="btn btn-warning" id="boton-cargar">Ver todos los registros</button>
-                    </div>
-                    <hr class="d-sm-none">
-                </div></form>            
-            <br>
-            <br>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <button type="submit" class="btn btn-success" id="boton-guardar">Guardar</button>
+            <button type="reset" class="btn btn-danger">Editar</button>
+            <a href="index.html" class="btn btn-info">Actualizar</a>
+            <button class="btn btn-warning" id="boton-cargar">Ver todos los registros</button>
         </div>
-         <div class="container" style="margin-top:30px">
-            <!-- contenido principal -->
+        <hr class="d-sm-none">
+    </div>
+    </form>
+    <br>
+    <br>
+    </div>
+    <div class="container" style="margin-top:30px">
+        <!-- contenido principal -->
 
         <div class="container" style="margin-top:30px">
             <!-- contenido principal -->
@@ -157,7 +178,8 @@
                     <div data-eprole="list" data-endpoint="?c=programa&amp;a=actionList" data-cb="printDataSource">
                         <table class="table table-striped">
                             <thead class="bg-primary navbar-dark text-white">
-                                <tr><th data-property="codigo" id="codigotxt">Código de Producto:</th>
+                                <tr>
+                                    <th data-property="codigo" id="codigotxt">Código de Producto:</th>
                                     <th data-property="nombre" id="nombretxt">Nombre del Producto:</th>
                                     <th data-property="precio" id="preciotxt">Valor Unitario:</th>
                                     <th data-property="existencia" id="existenciatxt">Numero de Existencia:</th>
@@ -166,55 +188,56 @@
                                     <th data-btns="delete,edit,detail">Opciones</th>
 
                                 </tr>
-                                  </thead>
+                            </thead>
 
-                          </div>
-                            
-
-                        </table>
-                        
-<tfoot>
-    
-     <a href="#" class="btnEditar">editar</a>
-                                        <a href="#" class="btnDetalle">detalle</a>
-                                        <a href="#" class="btnEliminar">eliminar</a>
-</tfoot>
-
-
-
-
-
-                        <ul class="pagination">
-                            <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item"><a class="page-link" href="#">3</a></li>
-                            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-                        </ul>
                     </div>
-                    <a href="#" class="btn btn-info">Nuevo registro</a>
+
+
+                    </table>
+
+                    <tfoot>
+
+                        <a href="#" class="btnEditar">editar</a>
+                        <a href="#" class="btnDetalle">detalle</a>
+                        <a href="#" class="btnEliminar">eliminar</a>
+                    </tfoot>
+
+
+
+
+
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
                 </div>
-            </div>            
-            <br>
-            <br>
+                <a href="#" class="btn btn-info">Nuevo registro</a>
+            </div>
         </div>
-        
-        <div class=" text-white jumbotron text-center" style="margin-bottom:0;background-color:#3f3fa8">
-            <p>Derechos Reservados MINSOFT.</p>
-        </div> 
-        <script src="appclient/libs/jquery.js"></script>
-        <script src="appclient/css/bootstrap-4.1.0-dist/js/bootstrap.min.js" type="text/javascript"></script>
-                <script src="appclient/js/core.js" type="text/javascript"></script>
-                
-        <script type="text/javascript">
-            function previewImage(nb) {        
-            var reader = new FileReader();         
-            reader.readAsDataURL(document.getElementById('uploadImage'+nb).files[0]);         
-            reader.onload = function (e) {             
-                document.getElementById('uploadPreview'+nb).src = e.target.result;         
-            };     
+        <br>
+        <br>
+    </div>
+
+    <div class=" text-white jumbotron text-center" style=" height:10px margin-bottom:0;background-color:#3f3fa8">
+        <p>Derechos Reservados MINSOFT.</p>
+    </div>
+    <script src="appclient/libs/jquery.js"></script>
+    <script src="appclient/css/bootstrap-4.1.0-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="appclient/js/core.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function previewImage(nb) {
+            var reader = new FileReader();
+            reader.readAsDataURL(document.getElementById('uploadImage' + nb).files[0]);
+            reader.onload = function (e) {
+                document.getElementById('uploadPreview' + nb).src = e.target.result;
+            };
         }
-        </script>
-           
-    </body>
+    </script>
+
+</body>
+
 </html>

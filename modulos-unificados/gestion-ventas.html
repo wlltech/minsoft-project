@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffe Shop</title>
-    <link rel="stylesheet" type="text/css" href="ventas-styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/ventas-styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/navigation-styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="icon" href="images/favicon.png" type="image/png">
@@ -16,8 +17,23 @@
 </head>
 
 <body>
-    <nav>
-
+    <nav class="navbar-per navbar-fixed-top">
+        <span><a class="navbar-brand" href="#">
+                <img src="images/favicon.png" width="36" height="36" alt="Logo">
+            </a></span>
+        </button></span>
+        <span>
+            <a class="item" href="index.html">Home</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-productos.html">Productos</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-ventas.html">Ventas</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-usuarios.html">Usuarios</a>
+        </span>
     </nav>
     <div class="container">
         <header class="header">
@@ -83,8 +99,8 @@
             <div class="section-sell">
                 <h5 class="sell-title">Descripción de la Venta </h5>
                 <div class="sell-table">
-                
-                    <table class="table-wrapper table table-sm table-striped table-hover" >
+
+                    <table class="table-wrapper table table-sm table-striped table-hover">
                         <thead>
                             <tr>
                                 <th scope="col">#Producto</th>
@@ -132,7 +148,7 @@
         </footer>
 
     </div>
-<script src="scripts.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
