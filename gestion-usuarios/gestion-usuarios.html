@@ -1,33 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="gestion-usuarios.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+  </style>
   <title>Gestión de Usuarios</title>
 </head>
-<body>
-  <h1>Gestión de Usuarios</h1>
 
-  <form name="selector">
-    <label for="rol">Usuario</label>
-    <input ></div>
+<body>
+  <main class="container user">
+    <h1>Gestión de Usuarios</h1>
+      <form class="form-group" name="selector">
+        <label for="rol">Usuario</label>
+        <input class="form-control">
     <br>
     <br>
     <label for="rol">Seleccionar el rol</label>
     <br>
-    <select name="rol" id="rol">
+    <select class="form-control" name="rol" id="rol">
       <option>Administrador</option>
       <option>Vendedor</option>
     </select>
     <br>
     <br>
-   <!-- 
+    <!-- 
        -->
     <label for="rol">Estado del usuario</label>
     <br>
-    <select name="estado" id="estado">
+    <select class="form-control" name="estado" id="estado">
       <option>Pendiente</option>
       <option>Autorizado</option>
       <option>No Autorizado</option>
@@ -36,8 +43,9 @@
     <br>
     <br>
     <input type="button" id="btn" value="Update" onclick="update()">
-
-  </form>
-
+    </form>
+  </main>
+  <script src="gestion-usuarios.js"></script>
 </body>
+
 </html>

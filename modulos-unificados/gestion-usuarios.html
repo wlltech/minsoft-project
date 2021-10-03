@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="users-styles.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="icon" href="images/favicon.png" type="image/png">
@@ -17,31 +17,31 @@
 
 <body>
   <header class="header-user">
-  <h1>Gestión de Usuarios</h1>
+    <h1>Gestión de Usuarios</h1>
   </header>
   <main class="user container">
-      <form class="form-group" name="selector">
-        <label for="rol">Usuario</label>
-        <input class="form-control">
-    <br>
-    <label for="rol">Seleccionar el rol</label>
-    <br>
-    <select class="form-control" name="rol" id="rol">
-      <option>Administrador</option>
-      <option>Vendedor</option>
-    </select>
-    <br>
-    <!-- 
+    <form class="form-group" name="selector">
+      <label for="rol">Usuario</label>
+      <input class="form-control">
+      <br>
+      <label for="rol">Seleccionar el rol</label>
+      <br>
+      <select class="form-control " name="rol" id="rol">
+        <option>Administrador</option>
+        <option>Vendedor</option>
+      </select>
+      <br>
+      <!-- 
        -->
-    <label for="rol">Estado del usuario</label>
-    <br>
-    <select class="form-control" name="estado" id="estado">
-      <option>Pendiente</option>
-      <option>Autorizado</option>
-      <option>No Autorizado</option>
-    </select>
-    <br>
-    <input type="button" id="btn" value="Update" onclick="update()">
+      <label for="rol">Estado del usuario</label>
+      <br>
+      <select class="form-control select-user" name="estado" id="estado">
+        <option>Pendiente</option>
+        <option>Autorizado</option>
+        <option>No Autorizado</option>
+      </select>
+      <br>
+      <button id="btn" value="Update" onclick="update()" class="btn" data-toggle="button"> Actualizar </button>
     </form>
   </main>
   <script src="gestion-usuarios.js"></script>
