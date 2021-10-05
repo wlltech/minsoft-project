@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <!-- _head.php -->
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Café Minsoft</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- <link href="appclient/css/bootstrap-4.1.0-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="styles/navigation-styles.css">
+    <link rel="stylesheet" type="text/css" href="products-styles.css">
+</head>
+
+<body>
+    <!-- nav_horizontal.php -->
+
+    <nav class="navbar-per navbar-fixed-top">
+        <span><a class="navbar-brand" href="#">
+                <img src="images/favicon.png" width="36" height="36" alt="Logo">
+            </a></span>
+        </button></span>
+        <span>
+            <a class="item" href="index.html">Home</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-productos.html">Productos</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-ventas.html">Ventas</a>
+        </span>
+        <span>
+            <a class="item" href="gestion-usuarios.html">Usuarios</a>
+        </span>
+    </nav>
+    <!-- <div id="myMenu">
+            <nav style="background-color:rgb(226, 85, 30)" class="navbar navbar-toggleable-md navbar-inverse fixed-top navbar navbar-expand-sm navbar-dark text-white" >
+                <div class="logo">
+                 <img class="logo" src="appclient\css\images/favicon.png" alt="logo"></img>
+            </div>
+                <a class="navbar-brand" href="index.html">Inicio/Producto</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+               <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="nav nav-pills">
+                        <li class="nav-item dropdown">
+                          
+                            <!--<div class="dropdown-menu">
+                                <a class="dropdown-item" href="index.html">Registro de Producto</a>
+                                <a class="dropdown-item" href="listar.html">Total de Productos</a>
+                            </div>
+                        </li>
+                       
+                    </ul>
+                </div> -->
+    <!-- </nav>   
+</div> -->
+
+    <!-- header-->
+    <!-- <header class="header"> -->
+    <!-- 
+
+        <br><br>
+        <div class="jumbotron text-center bg-light" style="margin-bottom:0">
+            <div class="logo1">
+                <img class="logo1" src="appclient\css\images/favicon.png" alt="logo"></img>
+            </div>
+            <h1>Coffe Shop</h1>
+            <p>Descripcion del Producto</p>
+
+        </div> -->
+
+    <!-- </header> -->
+
+    <!--
+       
+        <div id="content-msg-js">
+            <div class="row">
+                <div class="col-sm-12">
+                
+                    <div class="alert alert-success">
+                        <strong>Success!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                    </div>
+                    <div class="alert alert-info">
+                        <strong>Info!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                    </div>
+                    <div class="alert alert-warning">
+                        <strong>Warning!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                    </div>
+                    <div class="alert alert-danger">
+                        <strong>Danger!</strong> You should <a href="#" class="alert-link">read this message</a>.
+                    </div>
+                    
+                </div>
+            </div>
+        </div>-->
+    <div class="container">
+        <!-- contenido principal -->
+        <form data-reset="true" id="frmLogin" action="?c=Auth" data-success="successLogin" method="POST">
+            <span class="row">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <h2>Formulario | Nuevo Producto</h2>
+                    </div>
+                </div>
+            </span>
+            <span class="col-sm-4">
+                <div class="form-group">
+                    <label for="codigo">Código de Producto:</label>
+                    <input type="number" min="1" max="100" type="number" class="form-control col-sm-4" id="codigotxt"
+                        name="codigo">
+                </div>
+            </span>
+            <span class="col-sm-4">
+                <div class="form-group">
+                    <label for="nombre">Nombre del Producto:</label>
+                    <input type="text" class="form-control col-sm-4" id="nombretxt" name="nombre">
+                </div>
+            </span>
+            <span class="col-sm-4">
+                <div class="form-group">
+                    <label for="precio">Valor Unitario:</label>
+                    <input type="number" class="form-control col-sm-4" id="preciotxt" name="precio">
+                </div>
+            </span>
+            <span class="col-sm-4">
+                <div class="form-group">
+                    <label for="existencia">Numero de Existencia:</label>
+                    <input type="number" class="form-control col-sm-4" id="existenciatxt" name="existencia">
+                </div>
+            </span>
+            <span class="col-sm-4">
+                <label>Estado del Producto:</label>
+                <div class="form-group has-feedback">
+                    <input type="radio" name="estado" id="estadotxt">Disponible
+                    <input type="radio" name="estado" id="estadotxt">No disponible
+                </div>
+            </span>
+            <span>
+                <label>Imagen del producto</label>
+                <input id="uploadImage1" type="file" name="txtImages" onchange="previewImage(1);" />
+                <img id="uploadPreview1" width="150" height="150" src="" />
+            </span>
+            <span class="row">
+                <div class="col-sm-6">
+                    <button type="submit" class="btn " id="boton-guardar">Guardar</button>
+                    <button type="reset" class="btn ">Editar</button>
+                    <button href="index.html" type="item" class="btn">Actualizar</button>
+                    <button class="btn " id="boton-cargar">Ver registros</button>
+                </div>
+                <hr class="d-sm-none">
+            </span>
+        </form>
+        <br>
+    </div>
+    </div>
+    <!-- contenido principal -->
+
+    <div class="container" style="margin-top:30px">
+        <!-- contenido principal -->
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Listado de Productos</h2>
+                <br>
+                <div data-eprole="list" data-endpoint="?c=programa&amp;a=actionList" data-cb="printDataSource">
+                    <table class="table table-striped">
+                        <thead class="bg-primary navbar-dark text-white">
+                            <tr>
+                                <th data-property="codigo" id="codigotxt">Código de Producto:</th>
+                                <th data-property="nombre" id="nombretxt">Nombre del Producto:</th>
+                                <th data-property="precio" id="preciotxt">Valor Unitario:</th>
+                                <th data-property="existencia" id="existenciatxt">Numero de Existencia:</th>
+                                <th data-property="estado" id="estadotxt">Estado del Producto:</th>
+                                <th data-property="uploadImage1" id="uploadImage1txt">Imagen del producto</th>
+                                <th data-btns="delete,edit,detail">Opciones</th>
+
+                            </tr>
+                        </thead>
+
+                </div>
+
+
+                </table>
+
+                <tfoot>
+
+                    <a href="#" class="btnEditar">editar</a>
+                    <a href="#" class="btnDetalle">detalle</a>
+                    <a href="#" class="btnEliminar">eliminar</a>
+                </tfoot>
+
+
+
+
+
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                </ul>
+            </div>
+            <a href="#" class="btn btn-info">Nuevo registro</a>
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <div class=" text-white jumbotron text-center" style=" height:10px margin-bottom:0;background-color:#3f3fa8">
+        <p>Derechos Reservados MINSOFT.</p>
+    </div>
+    <script src="appclient/libs/jquery.js"></script>
+    <script src="appclient/css/bootstrap-4.1.0-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="appclient/js/core.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        function previewImage(nb) {
+            var reader = new FileReader();
+            reader.readAsDataURL(document.getElementById('uploadImage' + nb).files[0]);
+            reader.onload = function (e) {
+                document.getElementById('uploadPreview' + nb).src = e.target.result;
+            };
+        }
+    </script>
+
+</body>
+
+</html>
