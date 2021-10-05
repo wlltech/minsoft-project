@@ -1,0 +1,90 @@
+.logo{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background-image: url(appclient/css/images/favicon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+
+}
+
+.logo1{
+    position: relative;
+    width: 150px;
+    height: 100px;
+    background-image: url(appclient/css/images/favicon.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+
+#myMenu .nav a{
+    color:#fff !important;
+}
+
+#myMenu .nav .dropdown-menu a{
+    color:#007bff !important;
+}
+
+#myMenu .nav .dropdown-menu a:hover,
+#myMenu .nav .dropdown-menu a:active{
+    color: #fff;
+}
+
+input.val:invalid,
+textarea.val:invalid,
+select.val:invalid{
+    border-color: red !important;
+    color:red !important;
+    background-color: rgb(253, 247, 247) !important;
+}
+
+input.val:valid,
+textarea.val:valid,
+select.val:valid{
+  border: 1px solid green;
+}
+
+/*input.error, textarea.error, select.error{
+    border-color: red !important;
+    color:red !important;
+    background-color: rgb(253, 247, 247) !important;
+}*/
+
+#content-msg-js{
+    right: 10px;
+    position: fixed;
+    top:60px;
+    z-index: 100000;
+}
+
+a.btn.float-right{
+    margin-left: 10px !important;
+}
+
+table,tr,th,td{
+    text-align: right !important;
+    border: 1px solid #dee2e6;
+    
+}
+
+.blue_col{
+    background-color: #eaeaea;
+    border-color: #9db4d2;
+}
+.yellow_col{
+    background-color: #f7e5c3;
+    border-color: #e6d0a4;
+}
+.red_col{
+    background-color: #f7e5c3;
+    border-color: #fec34b;
+}
+.green_col{
+    background-color: #f7e5c3;
+    border-color: #fec34b;
+}
+
+
