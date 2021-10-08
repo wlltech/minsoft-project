@@ -61,3 +61,13 @@ button:hover {
     text-align: center;
     font-weight: 500;
 }
+
+
+table,tr,th,td{
+    text-align: right !important;
+    border: 1px solid #dee2e6;
+    
+}
+
+
+
