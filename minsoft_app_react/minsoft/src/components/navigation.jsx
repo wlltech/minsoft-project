@@ -1,38 +1,40 @@
 import React from "react";
+import {Link } from "react-router-dom"
 import './Navigation.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/js/bootstrap.js';
 import { FaUserAlt } from "react-icons/fa";
 import logo from './logo.png';
 
-
-function navigation() {
+function Navigation() {
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark ">
             <div className="container-fluid">
                 <img src={logo} className="App-logo" alt="logo" />
-                <a className="navbar-brand" href="/">Café Minsoft</a>
+                <span className="navbar-brand">Café Minsoft</span>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon" />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="/">Inicio</a>
+                            <Link className="nav-link active" aria-current="page" to="/main">Inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Productos</a>
+                            <Link className="nav-link" aria-current="page" to="/pruebas">Productos</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Ventas</a>
+                            <Link className="nav-link" aria-current="page" to="/sells">Ventas</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="/">Usuarios <i class="fa fa-user" aria-hidden="true"><FaUserAlt /></i> </a>
+                            <Link className="nav-link" aria-current="page" to="/">Usuarios <FaUserAlt /></Link>
                         </li>
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
-                        <button className="btn btn-outline-secondary" type="submit">
+                        <button className="btn btn-outline-secondary">
+                        {/* type="submit"  */}
                             Buscar</button>
                     </form>
                 </div>
@@ -42,4 +44,4 @@ function navigation() {
 }
 
 
-export default navigation;
+export default Navigation;

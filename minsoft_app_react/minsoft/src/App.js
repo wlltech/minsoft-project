@@ -1,16 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
+import {BrowserRouter as Router, Route } from "react-router-dom"
 import Navigation from "./components/navigation.jsx";
+import Main from "./components/main.jsx";
+import Sells from "./components/sells.jsx";
+import prueba from "./components/product-list.jsx";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
-import { FaUserAlt } from "react-icons/fa";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+      <Router className="App-header">
         <Navigation />
-      </header>
-    </div>
+        <Route path="/main" component={Main}/>
+        <Route path="/sells" component={Sells}/>
+        <Route path="/pruebas" component={prueba}/>
+
+      </Router>
   );
 }
 
