@@ -1,11 +1,11 @@
 import React from "react";
-import './products.css';
+//import './products.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import { FaUserCheck } from "react-icons/fa";
+//import { FaUserCheck } from "react-icons/fa";
 
-var NewComponent = React.createClass({
-  render: function() {
+
+ function products() {
     return (
       <div>
       <div classname="container">
@@ -68,8 +68,6 @@ var NewComponent = React.createClass({
           </div>
         </div>
         );
-  
-      </div>
-    );
-  }
-});
+};
+
+export default products;
