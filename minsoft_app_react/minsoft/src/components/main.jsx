@@ -2,10 +2,8 @@ import React from "react";
 import './Main.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import { FaUserAlt } from "react-icons/fa";
 import logo from "./logo.png";
 import './login.css';
-import {useState} from "react";
 import {FormGroup, Label, Input} from "reactstrap";
 
 
@@ -18,7 +16,7 @@ function Main() {
               <img className = "logo" src={logo} alt="logo" />
               <h1 className="caption">Coffe Shop</h1>
             </figure>
-            <h2>Inicie Sesión Para Continuar</h2>
+            <h2>Inicie Sesión para Continuar</h2>
           </div>
           
           <div className="etiquetas">
