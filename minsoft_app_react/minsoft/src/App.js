@@ -5,7 +5,7 @@ import Main from "./components/main.jsx";
 import Sells from "./components/sells.jsx";
 import prueba from "./components/product-list.jsx";
 
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
 function App() {

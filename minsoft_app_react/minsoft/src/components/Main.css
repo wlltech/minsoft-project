@@ -60,13 +60,13 @@ body {
 }
 
 .content {
-    width: 50%;
-    border: 2px solid;
+    width: 30%;
+    border: 4px solid;
     border-color: rgb(226, 85, 30);
     border-radius: 6px;
-    padding: 20px !important;
+    padding: 50px !important;
     margin: auto auto;
-    margin-top: 5%;
+    margin-top: 3%;
     text-align: center;
     justify-content: center;
 }
