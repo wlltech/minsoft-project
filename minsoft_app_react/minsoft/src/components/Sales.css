@@ -6,6 +6,17 @@ body {
 }
 
 
+.modal-dialog {
+    align-items: center!important;
+    display:flex;
+    margin: 5% 5% 5% 20%;
+}
+
+.modal-content {
+    min-width: 125vh;
+    max-width: 100%;
+}
+
 .container {
     width: 100%;
     margin: auto;

@@ -8,7 +8,7 @@ import 'bootstrap/dist/js/bootstrap.js';
  function Products() {
     return (
 
-      <div className="container">
+      <div className="container products">
             <form data-reset="true" id="frmLogin" action="?c=Auth" data-success="successLogin" method="">
               <span className="row">
                 <div className="col-sm-12">
