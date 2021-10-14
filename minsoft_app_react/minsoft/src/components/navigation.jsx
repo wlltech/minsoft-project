@@ -31,13 +31,12 @@ function Navigation() {
                             <Link className="nav-link" aria-current="page" to="/sales">Ventas</Link>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/">Usuarios <FaUserAlt /></Link>
+                            <Link className="nav-link" aria-current="page" to="/gestion-usuarios">Usuarios <FaUserAlt /></Link>
                         </li>
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />
                         <button className="btn btn-outline-secondary">
-                        {/* type="submit"  */}
                             Buscar</button>
                     </form>
                 </div>

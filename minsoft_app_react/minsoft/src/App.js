@@ -5,6 +5,7 @@ import Main from "./components/main.jsx";
 import Sales from "./components/sales.jsx";
 import Products from "./components/products.jsx";
 import prueba from "./components/product-list.jsx";
+import GestionUsr from "./components/gestion-usuarios.jsx";
 
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         <Route path="/sales" component={Sales}/>
         <Route path="/pruebas" component={prueba}/>
         <Route path="/product-list" component={Products}/>
+        <Route path="/gestion-usuarios" component={GestionUsr}/>
       </Router>
 
   );
