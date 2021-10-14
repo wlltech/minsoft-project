@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Button } from 'reactstrap';
 const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
   return (
     <tr>
@@ -8,15 +8,15 @@ const ReadOnlyRow = ({ contact, handleEditClick, handleDeleteClick }) => {
       <td>{contact.phoneNumber}</td>
       <td>{contact.email}</td>
       <td>
-        <button
+        <Button
           type="button"
           onClick={(event) => handleEditClick(event, contact)}
         >
           Editar
-        </button>
-        <button type="button" onClick={() => handleDeleteClick(contact.id)}>
+        </Button>
+        <Button type="button" onClick={() => handleDeleteClick(contact.id)}>
           Borrar
-        </button>
+        </Button>
       </td>
     </tr>
   );

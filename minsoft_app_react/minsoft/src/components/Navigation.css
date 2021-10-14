@@ -13,3 +13,14 @@ button:hover {
     font-size: 16px;
     font-weight: 500;
 }
+
+button {
+    background: navy!important;
+    /* width: 123.66px !important; */
+    /* padding: 2 px!important; */
+    margin: 2px !important;
+    height: 30px !important;
+    justify-content:center!important;
+    text-align: center!important;
+    color: white!important;
+}

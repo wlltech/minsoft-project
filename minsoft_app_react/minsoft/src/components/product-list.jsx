@@ -1,7 +1,9 @@
 import React, { useState, Fragment } from "react";
+import { Input, Button, Table, FormGroup } from 'reactstrap';
 
 //import React from "react";
 import './Navigation.css';
+import './Products.css';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import { nanoid } from "nanoid";
@@ -116,9 +118,9 @@ const List = () => {
     };
   
     return (
-      <div className="app-container">
+      <div className="container-app">
         <form onSubmit={handleEditFormSubmit}>
-          <table>
+          <Table className="table table-sm table-striped table-hover">
             <thead>
               <tr>
                 <th>Código de Producto:</th>
@@ -147,41 +149,41 @@ const List = () => {
                 </Fragment>
               ))}
             </tbody>
-          </table>
+          </Table>
         </form>
   
         <h2>Añadir un nuevo producto:</h2>
-        <form onSubmit={handleAddFormSubmit}>
-          <input
+        <FormGroup className="group" onSubmit={handleAddFormSubmit}>
+          <Input
             type="text"
             name="fullName"
             required="required"
             placeholder="Código de Producto"
             onChange={handleAddFormChange}
           />
-          <input
+          <Input
             type="text"
             name="address"
             required="required"
             placeholder="Nombre del Produto"
             onChange={handleAddFormChange}
           />
-          <input
+          <Input
             type="text"
             name="phoneNumber"
             required="required"
             placeholder="Valor Unitario"
             onChange={handleAddFormChange}
           />
-          <input
+          <Input
             type="email"
             name="email"
             required="required"
             placeholder="Número de Existencia"
             onChange={handleAddFormChange}
           />
-          <button type="submit">Agregar</button>
-        </form>
+          <Button type="submit">Agregar</Button>
+        </FormGroup>
       </div>
     );
   };
