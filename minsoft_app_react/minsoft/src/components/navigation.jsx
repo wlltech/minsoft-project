@@ -25,6 +25,9 @@ function Navigation() {
                             <Link className="nav-link" aria-current="page" to="/products">Productos</Link>
                         </li>
                         <li className="nav-item">
+                            <Link className="nav-link" aria-current="page" to="/pruebas">Lista de Productos</Link>
+                        </li>
+                        <li className="nav-item">
                             <Link className="nav-link" aria-current="page" to="/sales">Ventas</Link>
                         </li>
                         <li className="nav-item">

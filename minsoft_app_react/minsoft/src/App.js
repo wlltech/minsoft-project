@@ -16,7 +16,7 @@ function App() {
         <Route path="/products" component={Products}/>
         <Route path="/sales" component={Sales}/>
         <Route path="/pruebas" component={prueba}/>
-        <Route path="/" component={""}/>
+        <Route path="/product-list" component={Products}/>
       </Router>
 
   );
