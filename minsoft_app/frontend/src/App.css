@@ -1,0 +1,32 @@
+.App {
+  text-align: center;
+}
+
+body {
+  background: white;
+  background-image: url('background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.App-logo {
+  height: 7vh;
+  width: 7vh;
+  pointer-events: none;
+}
+
+/* 
+.App-header {
+  background-color: navy;
+  min-height: 5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: left;
+  justify-content: left;
+  font-size: calc(10px + 2vmin);
+  color:white;
+} */
+
+.App-link {
+  color: #61dafb;
+}
