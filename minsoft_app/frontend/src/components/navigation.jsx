@@ -1,8 +1,6 @@
 import React from "react";
 import {Link } from "react-router-dom"
 import './Navigation.css';
-import "bootstrap/dist/css/bootstrap.min.css";
-import 'bootstrap/dist/js/bootstrap.js';
 import { FaUserAlt } from "react-icons/fa";
 import logo from './logo.png';
 
@@ -32,6 +30,9 @@ function Navigation() {
                         </li>
                         <li className="nav-item">
                             <Link className="nav-link" aria-current="page" to="/gestion-usuarios">Usuarios <FaUserAlt /></Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" aria-current="page" to="/autenticacion">Usuarios <FaUserAlt /></Link>
                         </li>
                     </ul>
                     <form className="d-flex">

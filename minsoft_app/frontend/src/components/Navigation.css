@@ -1,5 +1,5 @@
 .navbar {
-    background: navy !important;
+    background: #13121c!important;
 }
 
 span.navbar-brand {
@@ -19,8 +19,10 @@ button {
     /* width: 123.66px !important; */
     /* padding: 2 px!important; */
     margin: 2px !important;
-    height: 30px !important;
+    /* height: 30px !important; */
     justify-content:center!important;
     text-align: center!important;
     color: white!important;
+    border:none!important;
+    cursor: pointer;
 }
