@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "fullName": "1001",
+    "address": "Latte Chai",
+    "phoneNumber": "$5.000",
+    "email": "10"
+  },
+  {
+    "id": 2,
+    "fullName": "1002",
+    "address": "Cappuccino",
+    "phoneNumber": "$10.000",
+    "email": "3"
+  },
+  {
+    "id": 3,
+    "fullName": "1003",
+    "address": "Fruppe en Leche",
+    "phoneNumber": "$8.000",
+    "email": "7"
+  },
+  {
+    "id": 4,
+    "fullName": "1004",
+    "address": "Expreso",
+    "phoneNumber": "$4.500",
+    "email": "0"
+  },
+  {
+    "id": 5,
+    "fullName": "1005",
+    "address": "Tinto Campecino",
+    "phoneNumber": "$3.000",
+    "email": "100"
+  }
+]

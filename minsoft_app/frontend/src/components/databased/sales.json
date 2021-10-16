@@ -1,5 +1,6 @@
-[{
-        "idSale": 1,
+[
+    {
+        "idSale":"",
         "totalPrice": "10000",
         "idProduct": 11,
         "amount": 2,
@@ -8,23 +9,25 @@
         "clientId": "1101321054",
         "clientName": "Juan",
         "sellerName": "Juana la Loca",
-        "saleStatus": "Despachada"
+        "saleStatus": "Despachada",
+        "description": "Cafe Late"
     },
     {
-    "idSale": 2,
-    "totalPrice": "30000",  
-    "idProduct": 12,
-    "amount": 3,
-    "unitPrice": 10000,
-    "saleDate": "02/05/2020",
-    "clientId": "1101321054",
-    "clientName": "Miguel",
-    "sellerName": "Margaret Tatcher",
-    "saleStatus": "Despachada"
+        "idSale":"",
+        "totalPrice": "30000",
+        "idProduct": 12,
+        "amount": 3,
+        "unitPrice": 10000,
+        "saleDate": "02/05/2020",
+        "clientId": "1101321054",
+        "clientName": "Miguel",
+        "sellerName": "Margaret Tatcher",
+        "saleStatus": "Despachada",
+        "description": "Cafe Campesino"
     },
-    {
-        "idSale": 3,
-        "totalPrice": "40000",  
+    {   
+        "idSale":"",
+        "totalPrice": "40000",
         "idProduct": 13,
         "amount": 4,
         "unitPrice": 10000,
@@ -32,7 +35,7 @@
         "clientId": "1101321054",
         "clientName": "Jairo",
         "sellerName": "Catalina La Grande",
-        "saleStatus": "Despachada"
-        }
-    ]
-
+        "saleStatus": "Despachada",
+        "description": "Cold Brew"
+    }
+]
