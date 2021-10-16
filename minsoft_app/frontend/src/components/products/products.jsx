@@ -1,9 +1,5 @@
 import React from "react";
 import './Products.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
-//import { FaUserCheck } from "react-icons/fa";
-
 
  function Products() {
     return (

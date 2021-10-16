@@ -1,7 +1,4 @@
 import React from "react";
-import './Sales.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
 
 function GestionUsr() {
     return (

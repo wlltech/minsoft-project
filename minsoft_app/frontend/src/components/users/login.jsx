@@ -1,7 +1,4 @@
 import React from "react";
-import './Main.css';
-import 'bootstrap/dist/css/bootstrap.css';
-import 'bootstrap/dist/js/bootstrap.js';
 import logo from "./logo.png";
 import './login.css';
 import {FormGroup} from "reactstrap";

@@ -2,13 +2,13 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'bootstrap/dist/js/bootstrap.js';
 import {BrowserRouter as Router, Route } from "react-router-dom"
-import Navigation from "./components/navigation.jsx";
-import Main from "./components/main.jsx";
-import Sales from "./components/sales.jsx";
-import Products from "./components/products.jsx";
-import List from "./components/product-list.jsx";
-import GestionUsr from "./components/gestion-usuarios.jsx";
-import Auth from "./components/login/authentication.jsx";
+import Navigation from "./components/navigation/navigation.jsx";
+import Login from "./components/users/login.jsx";
+import Sales from "./components/sales/sales.jsx";
+import Products from "./components/products/products.jsx";
+import List from "./components/products/product-list.jsx";
+import GestionUsr from "./components/users/gestion-usuarios.jsx";
+import Auth from "./components/users/authentication.jsx";
 
 import "./App.css";
 
@@ -16,7 +16,7 @@ function App() {
   return (
       <Router>
         <Navigation />
-        <Route path="/main" component={Main}/>
+        <Route path="/main" component={Login}/>
         <Route path="/products" component={Products}/>
         <Route path="/sales" component={Sales}/>
         <Route path="/pruebas" component={List}/>

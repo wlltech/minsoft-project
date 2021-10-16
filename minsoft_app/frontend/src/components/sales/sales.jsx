@@ -1,6 +1,6 @@
 import React, { useState, Fragment } from "react";
 import './Sales.css';
-import sales from './databased/sales.json';
+import sales from '../databased/sales.json';
 import { FaUserCheck, FaEdit } from "react-icons/fa";
 import { nanoid } from 'nanoid';
 import { Input, Button, Form, FormGroup, Modal, ModalHeader, ModalBody, ModalFooter, Table } from 'reactstrap';

@@ -1,10 +1,8 @@
 import React, { useState, Fragment } from "react";
 import { Input, Button, Table, FormGroup } from 'reactstrap';
 
-//import React from "react";
-import './Navigation.css';
+// import './Navigation.css';
 import './Products.css';
-import "bootstrap/dist/css/bootstrap.min.css";
 
 import { nanoid } from "nanoid";
 import data from "./mock-data.json";
