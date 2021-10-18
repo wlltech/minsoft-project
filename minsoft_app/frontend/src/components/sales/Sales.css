@@ -8,8 +8,7 @@
 }
 
 .modal-content {
-    min-width: 125vh;
-    max-width: 100%;
+    min-width: 150vh!important;
 }
 
 .container {
@@ -80,17 +79,28 @@ button:hover {
 
 
 .wrapper {
-flex-direction: column;
-justify-content: space-between;
+/* flex-direction: column;
+justify-content: center;
 height: 100%;
 font-weight: 500;
+
+width:80%; 
+height:800px;  */
+
+width: 100%;
+margin: auto;
+max-width: 80%;
+margin: auto auto;
+/* grid-gap: 10px; */
+align-items: center!important;
+display:flex;
+padding:10px;
+justify-content: center;
 overflow:auto;
-width:auto; 
-height:150px; 
 }
 
 .wrapper::-webkit-scrollbar {
-    width: 7px;
+    width: 5px;
 
 } 
 
