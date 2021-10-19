@@ -32,7 +32,7 @@ const salesTest = [
     "clientId": "1101321054",
     "clientName": "Miguel",
     "sellerName": "Margaret Tatcher",
-    "saleStatus": "Despachada",
+    "saleStatus": "En Proceso",
     "productName": "Cafe Campesino"
   }]
 
@@ -85,6 +85,8 @@ export default function Sales() {
     setNewSale(!newSale)
   }
 
+  //Función para modificar el estado de cada venta
+
   //useState para modal de listado de ventas 
   const [modal, setModal] = useState(false);
   const toggle = () => {
@@ -115,7 +117,7 @@ export default function Sales() {
       </div>
       <div>
         {newSale ? (<div className="container mt-2">
-          <AddSale addSale={addSale} />
+          <AddSale addSale={addSale} key={dataSales.idSale} />
         </div>) : ((<div></div>))}
       </div>
       {/* Renderizar Listado de Ventas */}
@@ -123,7 +125,9 @@ export default function Sales() {
         {listSales ?
           (<div><h2>Listado de Ventas </h2>
             <div className="wrapper mt-3">
-              <SalesTable dataSales={dataSales}/>
+              <SalesTable
+                dataSales={dataSales}
+                 />
             </div></div>) : (<div></div>)}
       </div>
       <div>

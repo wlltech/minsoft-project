@@ -5,11 +5,11 @@ import { FaEdit } from "react-icons/fa";
 // import sales from './databased/sales.json';
 
 
-export default function SalesTable(props) {
+export default function SalesTable({dataSales}) {
 
     
 
-    console.log(props.dataSales)
+    console.log(dataSales)
 
     return (
         <Table className="table table-sm table-striped table-hover">
@@ -30,7 +30,7 @@ export default function SalesTable(props) {
             </thead>
             <tbody>
                 {
-                    props.dataSales.map(sales => (
+                    dataSales.map(sales => (
                         <tr key={sales.idSale}>
                             <th scope="row" >{sales.idSale}</th>
                             <td>{sales.saleDate}</td>
@@ -42,7 +42,7 @@ export default function SalesTable(props) {
                             <td>{sales.unitPrice}</td>
                             <td>{sales.unitPrice * sales.amount}</td>
                             <td>{sales.saleStatus}</td>
-                            <td><Button><FaEdit /></Button></td>
+                            <td><Button ><FaEdit /></Button></td>
                         </tr>
                     ))
                 }

@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "productName": "Latte Chai" ,
+      "unitPrice":5000,
+      "available": true
+    },
+
+    {
+        "id": 2,
+        "productName": "Cappuccino" ,
+        "unitPrice":6000,
+        "available": true
+      },
+
+      {
+        "id": 3,
+        "productName": "Fruppe en Leche" ,
+        "unitPrice":6500,
+        "available": true
+      },
+
+      {
+        "id": 4,
+        "productName": "Expreso" ,
+        "unitPrice":4000,
+        "available": true
+      },
+
+      {
+        "id": 5,
+        "productName": "Tinto Campecino" ,
+        "unitPrice":4000,
+        "available": true
+      }
+  ]
+  
