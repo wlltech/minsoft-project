@@ -1,5 +1,5 @@
 import React from "react";
-import {Link } from "react-router-dom"
+import {Link, NavLink } from "react-router-dom"
 import './Navigation.css';
 import { FaUserAlt } from "react-icons/fa";
 import logo from './logo.png';
@@ -11,29 +11,29 @@ function Navigation() {
             <div className="container-fluid">
                 <img src={logo} className="App-logo" alt="logo" />
                 <span className="navbar-brand">Café Minsoft</span>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" >
                     <span className="navbar-toggler-icon" />
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <Link className="nav-link active" aria-current="page" to="/main">Inicio</Link>
+                            <NavLink className="nav-link" aria-current="page" exact to="/" activeClassName="active">Inicio</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/products">Productos</Link>
+                            <NavLink className="nav-link" aria-current="page" to="/newproduct" activeClassName="active">Productos</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/pruebas">Lista de Productos</Link>
+                            <NavLink className="nav-link" aria-current="page" to="/products-list" activeClassName="active">Lista de Productos</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/sales">Ventas</Link>
+                            <NavLink className="nav-link" aria-current="page" to="/sales" activeClassName="active">Ventas</NavLink>
                         </li>
                         <li className="nav-item">
-                            <Link className="nav-link" aria-current="page" to="/gestion-usuarios">Usuarios <FaUserAlt /></Link>
+                            <NavLink className="nav-link" aria-current="page" to="/gestion-usuarios" activeClassName="active">Usuarios <FaUserAlt /></NavLink>
                         </li>
-                        <li className="nav-item">
+                        {/* <li className="nav-item">
                             <Link className="nav-link" aria-current="page" to="/autenticacion">Usuarios <FaUserAlt /></Link>
-                        </li>
+                        </li> */}
                     </ul>
                     <form className="d-flex">
                         <input className="form-control me-2" type="search" placeholder="Buscar" aria-label="Search" />

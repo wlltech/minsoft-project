@@ -47,7 +47,7 @@ import './Products.css';
               <span>
                 <label>Imagen del producto</label>
                 <input id="uploadImage1" type="file" name="Images" onchange="previewImage(1);" />
-                <img id="uploadPreview1" width="{150}" height="{150}" src />
+                <img id="uploadPreview1" width="{150}" height="{150}" src alt="logo" />
               </span>
               <span className="row">
                 <div className="col-sm-6">
