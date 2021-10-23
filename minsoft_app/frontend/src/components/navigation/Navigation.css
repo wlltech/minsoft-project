@@ -2,7 +2,7 @@
     background: #13121c!important;
 }
 
-span.navbar-brand {
+.navbar-brand {
     color: rgb(226, 85, 30) !important;
     font-weight: 700;
 }
