@@ -7,12 +7,8 @@ function requiresPassword() {
 }
 
 
-const userSchema = new Schema({
+const userSchema = new Schema([{
     userName: {
-        type: String,
-        unique: true
-    },
-    name: {
         type: String,
         required: true,
     },
@@ -35,7 +31,7 @@ const userSchema = new Schema({
         required: true,
     },
     userId: {
-        type: Number,
+        type: String,
     },
     status: {
         type: String,
@@ -45,7 +41,7 @@ const userSchema = new Schema({
     },
 }, {
     versionKey: false
-});
+}]);
 
 userSchema.methods.toJSON = function () {
     return { ...this.toObject(), password: undefined };
