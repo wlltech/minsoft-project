@@ -1,7 +1,8 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const productSchema = new Schema({
+const productSchema = new Schema(
+{
     idProduct: {
         type: String,
         required: true,
@@ -16,7 +17,7 @@ const productSchema = new Schema({
         required: true,
     },
     stock: {
-        type: Number,
+        type: String,
         required: true,
     },
 }, {

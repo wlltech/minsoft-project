@@ -1,12 +1,13 @@
-require('dotenv').config();
-const chalk = require('chalk');
-const express = require('express');
-const cors = require('cors');
+require("dotenv").config();
+const chalk = require("chalk");
+const express = require("express");
+const cors = require("cors");
 
-require('./drivers/mongo-connection');
+require("./drivers/mongo-connection");
 
-// const tasksRouter = require('./routes/tasks-routes');
-// const usersRouter = require('./routes/users-routes');
+const productsRouter = require("./routes/products");
+const salesRouter = require("./routes/sales");
+const usersRouter = require("./routes/users");
 
 const port = process.env.PORT || 8080;
 const app = express();
@@ -14,18 +15,26 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.use("/api/users", usersRouter);
+app.use("/api/sales", salesRouter);
+app.use("/api/products", productsRouter);
+
+app.get("/", (req, res) => {
+  res.send("Bienvenido a la API de Minsoft");
+});
+app.get("*", (req, res) => {
+  return res.send("Not found!");
+});
+
 // routes // controllers // models
-
-// app.use('/api/tasks', tasksRouter);
-// app.use('/api/users', usersRouter);
-
-// app.get('*', (request, response) => {
-//   return response.send('Not found!');
+// app.post("/api/pruebas", (req, res) =>
+// {
+//   console.log("endpoint creado")
+//   res.send("You have posted something")
 // });
-async function main(){
-    await app.listen(port);
-    console.log(chalk.green(`El servidor está listo en el puerto: ${port}!`))
 
-
+async function main() {
+  await app.listen(port);
+  console.log(chalk.green(`El servidor está listo en el puerto: ${port}!`));
 }
-main()
+main();
