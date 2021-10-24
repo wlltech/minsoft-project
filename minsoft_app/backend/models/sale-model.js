@@ -3,10 +3,6 @@ const { Schema } = mongoose;
 
 const saleSchema = new Schema(
   {
-    idSale: {
-      type: String,
-      required: true,
-    },
     sellerName: {
       type: String,
       required: true,

@@ -44,7 +44,7 @@ const readProducts = (request, response) => {
 
 // PATCH
 const updateProduct = (request, response) => {
-  const id = request.params._id;
+  const id = request.params.id;
   if (!id) {
     return response.status(400).send({ error: 'No hay producto, para modificar' });
   }
@@ -65,7 +65,7 @@ const updateProduct = (request, response) => {
 
 // DELETE
 const deleteProduct = (request, response) => {
-  const id = request.params._id;
+  const id = request.params.id;
   if (!id) {
     return response.status(400).send({ error: 'No hay producto, para eliminar' });
   }
@@ -73,7 +73,7 @@ const deleteProduct = (request, response) => {
     if (error) {
       return response.status(500).send({ error });
     }
-    return response.send(result);
+    return response.status(200).send(result);
   });
 };
 
