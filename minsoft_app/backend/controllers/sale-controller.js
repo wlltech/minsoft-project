@@ -17,7 +17,7 @@ const createSale = (request, response) => {
 
 // GET
 const readSales = (request, response) => {
-  const idSale = request.query.idSale;
+  const id = request.query._id;
   const clientId = request.query.clientId;
   const clientName = request.query.clientName;
   const saleDate = request.query.saleDate;
@@ -25,8 +25,8 @@ const readSales = (request, response) => {
 
 
   const filter = {};
-  if (idSale) {
-    filter._id = idSale;
+  if (id) {
+    filter._id = id;
   }
   if (clientId) {
     filter.clientId = clientId;
@@ -48,7 +48,7 @@ const readSales = (request, response) => {
 
 // PATCH
 const updateSale = (request, response) => {
-  const idSale = request.params.idSale;
+  const id = request.params._id;
   if (!idSale) {
     return response.status(400).send({ error: 'No hay id, para modificar' });
   }

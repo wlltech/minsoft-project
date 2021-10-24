@@ -29,9 +29,7 @@ app.get("*", (req, res) => {
 // routes // controllers // models
 // app.post("/api/pruebas", (req, res) =>
 // {
-//   console.log("endpoint creado")
-//   res.send("You have posted something")
-// });
+
 
 async function main() {
   await app.listen(port);

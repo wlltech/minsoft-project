@@ -15,14 +15,14 @@ const createProduct = (request, response) => {
 
 // GET
 const readProducts = (request, response) => {
-  const idProduct= request.query. idProduct;
+  const id= request.query._id;
   const productName = request.query.productName;
   const unitPrice = request.query.unitPrice;
   const stock = request.query.stock;
 
   const filter = {};
-  if (idProduct) {
-    filter._id = idProduct;
+  if (id) {
+    filter._id = id;
   }
   if (productName) {
     filter.productName = productName;
@@ -44,17 +44,17 @@ const readProducts = (request, response) => {
 
 // PATCH
 const updateProduct = (request, response) => {
-  const idProduct = request.params.idProduct;
-  if (!idProduct) {
+  const id = request.params._id;
+  if (!id) {
     return response.status(400).send({ error: 'No hay producto, para modificar' });
   }
 
-  Product.updateOne({ _id: idProduct }, request.body, (error, result) => {
+  Product.updateOne({ _id: id }, request.body, (error, result) => {
     if (error) {
       return response.status(500).send({ error });
     }
 
-    Product.find({ _id: idProduct}, (error, result) => {
+    Product.find({ _id: id}, (error, result) => {
       if (error) {
         return response.status(500).send({ error });
       }
@@ -65,11 +65,11 @@ const updateProduct = (request, response) => {
 
 // DELETE
 const deleteProduct = (request, response) => {
-  const idProduct = request.params.idProduct;
-  if (!idProduct) {
+  const id = request.params._id;
+  if (!id) {
     return response.status(400).send({ error: 'No hay producto, para eliminar' });
   }
-  Product.remove({ _id: idProduct }, (error, result) => {
+  Product.remove({ _id: id}, (error, result) => {
     if (error) {
       return response.status(500).send({ error });
     }
