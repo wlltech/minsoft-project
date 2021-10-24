@@ -1,12 +1,13 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import './Sales.css';
-// import sales from '../databased/sales.json';
 import { nanoid } from 'nanoid';
 import { Button } from 'reactstrap';
 import { FaEdit } from "react-icons/fa";
 import SearchSales from './salesSearch.jsx';
 import AddSale from "./addSale";
 import SalesTable from "./saleListAndEditStatus";
+
+
 
 const salesTest = [
   {
@@ -95,8 +96,6 @@ export default function Sales() {
     setModal(!modal);
   }
 
-
-
   return (
     <Fragment>
       <h2>Registro de Ventas</h2>
@@ -109,7 +108,7 @@ export default function Sales() {
             Buscar
           </Button>
           <Button type="button" className="btn col-sm-4" data-toggle="button" onClick={onListSales}>
-            {/* onClick={toggle} */}
+
             Listar Ventas
           </Button>
         </div>
@@ -125,9 +124,7 @@ export default function Sales() {
         {listSales ?
           (<div><h2>Listado de Ventas </h2>
             <div className="wrapper mt-3">
-              <SalesTable
-                dataSales={dataSales}
-                 />
+              <SalesTable/>
             </div></div>) : (<div></div>)}
       </div>
       <div>
