@@ -6,19 +6,6 @@ h2 {
 
 }
 
-/* button{
-    background: navy!important;
-    width: 123.66px !important;
-    height: 30px !important;
-    font-weight: 500!important;
-}
-
-.btn>button:hover {
-    background: rgb(226, 85, 30)!important;     
-    color: rgb(255, 255, 255)!important;
-    font-size: 16px!important;
-    font-weight: 500!important;
-} */
 
 .products{
     display: flex;

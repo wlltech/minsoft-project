@@ -1,6 +1,4 @@
 
-
-
 .modal-dialog {
     align-items: center!important;
     display:flex;
@@ -16,7 +14,6 @@
     margin: auto;
     max-width: 50%;
     margin: auto auto;
-    /* grid-gap: 10px; */
     align-items: center!important;
     display:flex;
     padding:10px;
@@ -36,22 +33,6 @@ h1 {
     grid-column: 1 / -1;
 }
 
-/* 
-button {
-    background: #55abfd;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    font-weight: 500;
-    border: none;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    cursor: pointer;
-    /* max-height: 30px; */
-    /* padding: 5px 5px;
-} */ */
-
-
 
 button:hover {
     background: rgb(226, 85, 30);
@@ -62,36 +43,14 @@ button:hover {
 }
 
 
-/* .data-factura .section-header .logo1 {
-    min-height: 16px;
-    max-height: 32px;
-    min-width: 16px;
-    max-width: 32;
-    height: 32px;
-    width: 32px;
-    border-radius: 2px;
-    margin: auto;
-    float: center;
-    grid-column: 4 / 5;
-    grid-row: 1 / 2;
-    display: block;
-} */
-
 
 .wrapper {
-/* flex-direction: column;
-justify-content: center;
-height: 100%;
-font-weight: 500;
 
-width:80%; 
-height:800px;  */
 
 width: 100%;
 margin: auto;
 max-width: 80%;
 margin: auto auto;
-/* grid-gap: 10px; */
 align-items: center!important;
 display:flex;
 padding:10px;

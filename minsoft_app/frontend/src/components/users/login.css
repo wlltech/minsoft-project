@@ -10,47 +10,12 @@ body {
 }
 
 
-/* .container.css {
-    width: 100% ;
-    max-width: 100%;
-    position: relative;
-    text-align: center;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(5, auto);
-}
-
- 
-*span {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    padding: 20px;
-    margin-bottom: 1%;
-  }*/
-
  .caption {
     color: navy;
     text-align: center;
     size: 30px;
 }
-     
-
-/* input{
-    background: navy !important;
-    color:white !important;
-    width: 123.66px !important;
-    height: 30px !important
-} */
-
-/* input:hover {
-    background: rgb(226, 85, 30) !important;
-    color: rgb(255, 255, 255);
-    font-size: 16px;
-    font-weight: 500;
-} */
+    
 
 .logo {
     width: 128px !important;
@@ -108,16 +73,7 @@ p {
     margin: 0 0 40px;
 }
 
-/*.buttonlog{
-    margin: 16px 0 10px;
-    background: navy;
-    color: white;
-    border: none;
-    padding: 0.6rem 6rem;
-    font-family: 'Helvetica';
-    font-size: 1rem;
-    border-radius: 0.4rem;
-} */  
+ 
 
 .buttonlog>button{
     background: navy;

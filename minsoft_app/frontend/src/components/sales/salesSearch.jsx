@@ -1,59 +1,78 @@
-import React, { useState } from 'react';
-import { Table, Button, ModalFooter, Modal, ModalHeader, ModalBody } from 'reactstrap';
-import { FaEdit } from "react-icons/fa";
-
+import React, { useState, useEffect } from 'react';
+import { Table, Button, ModalFooter, Modal, ModalHeader, ModalBody, Input } from 'reactstrap';
+import { FaSearch } from "react-icons/fa";
+import axios from "axios";
 // import sales from './databased/sales.json';
 
 
 export default function SearchSales(props) {
+    const [dataSales, setDataSales] = useState(null)
+    const [loading, setLoading] = useState(true)
 
-    
-    console.log(props.dataSales)
+    const baseURL = "http://localhost:8080/api"
+
+
+    console.log(baseURL + " url ")
+    // useEffect para traer los datos con petición Get
+    useEffect(() => {
+        axios.get(`${baseURL}/sales`)
+            .then(response => {
+                const data = response.data
+                setDataSales(data)
+                setLoading(false)
+            })
+    }, [])
+
 
     return (
-        <div>
-            <Modal isOpen={props.modal} fade={true} toggle={props.toggle}>
-                <ModalHeader toggle={props.toggle}>Listado de Ventas</ModalHeader>
-                <ModalBody>
-                    <Table className="table table-sm table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Id. Venta</th>
-                                <th scope="col">Fecha</th>
-                                <th scope="col">Vendedor</th>
-                                <th scope="col">Id. Cliente</th>
-                                <th scope="col">Cliente</th>
-                                <th scope="col">Descripción</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">Valor Unitario</th>
-                                <th scope="col">Total</th>
-                                <th scope="col">Estado</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {
-                                props.dataSales.map(sales => (
-                                    <tr key={sales.idSale}>
-                                        <th scope="row" >{sales.idSale}</th>
-                                        <td>{sales.saleDate}</td>
-                                        <td>{sales.sellerName}</td>
-                                        <td>{sales.clientId}</td>
-                                        <td>{sales.clientName}</td>
-                                        <td>{sales.productName}</td>
-                                        <td>{sales.amount}</td>
-                                        <td>{sales.unitPrice}</td>
-                                        <td>{sales.totalPrice}</td>
-                                        <td>{sales.saleStatus}</td>
-                                    </tr>
-                                ))
-                            }
-                        </tbody>
-                    </Table>
-                </ModalBody>
-                <ModalFooter>
-                    <Button color="primary" type="submit" onClick={props.toggle}>Cerrar</Button>{' '}
-                </ModalFooter>
-            </Modal>
-        </div>
+        <>
+            {loading ?
+                (<div className="spinner-grow spinner-grow-lg" role="status">
+                    <span className="sr-only"></span>
+                </div>) : null
+
+            }
+            {dataSales ? (<div>
+                <Modal isOpen={props.modal} fade={true} toggle={props.toggle}>
+                    <ModalHeader className="justify-content-center">
+                        <span><FaSearch /><Input placeholder="buscar" />
+                        </span>
+                    </ModalHeader>
+                    <ModalBody>
+                        <Table className="table table-sm table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id. Venta</th>
+                                    <th scope="col">Fecha</th>
+                                    <th scope="col">Vendedor</th>
+                                    <th scope="col">Id. Cliente</th>
+                                    <th scope="col">Cliente</th>
+                                    <th scope="col">Total</th>
+                                    <th scope="col">Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {
+                                    dataSales.map(sales => (
+                                        <tr key={sales._id}>
+                                            <th scope="row" >{sales._id.substring(17, 24)}</th>
+                                            <td>{sales.saleDate.substring(0, 10)}</td>
+                                            <td>{sales.sellerName}</td>
+                                            <td>{sales.clientId}</td>
+                                            <td>{sales.clientName}</td>
+                                            <td>{sales.totalPrice}</td>
+                                            <td>{sales.saleStatus}</td>
+                                        </tr>
+                                    ))
+                                }
+                            </tbody>
+                        </Table>
+                    </ModalBody>
+                    <ModalFooter>
+                        <Button color="primary" type="submit" onClick={props.toggle}>Cerrar</Button>{' '}
+                    </ModalFooter>
+                </Modal>
+            </div>) : null}
+        </>
     )
 }

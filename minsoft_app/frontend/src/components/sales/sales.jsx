@@ -130,9 +130,9 @@ export default function Sales() {
       <div>
         {/* renderizar buscar */}
         {modal ?
-          (<div><h2>Buscar </h2>
+          (<div>
             <div className="wrapper mt-3">
-              <SearchSales toggle={toggle} modal={modal} dataSales={dataSales} />
+              <SearchSales toggle={toggle} modal={modal} />
             </div></div>) : (<div></div>)}
       </div>
     </Fragment>
