@@ -2,20 +2,20 @@ import React, { useState, useEffect } from 'react';
 import { Table, Button, ModalFooter, Modal, ModalHeader, ModalBody, Input } from 'reactstrap';
 import { FaSearch } from "react-icons/fa";
 import axios from "axios";
-// import sales from './databased/sales.json';
+import { BACKEND_SALES } from '../const/backend';
+
 
 
 export default function SearchSales(props) {
     const [dataSales, setDataSales] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    const baseURL = "http://localhost:8080/api"
+    const salesURL = BACKEND_SALES
 
 
-    console.log(baseURL + " url ")
     // useEffect para traer los datos con petición Get
     useEffect(() => {
-        axios.get(`${baseURL}/sales`)
+        axios.get(`${salesURL}`)
             .then(response => {
                 const data = response.data
                 setDataSales(data)
