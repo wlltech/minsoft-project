@@ -1,34 +1,35 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Button } from 'reactstrap';
 import { FaEdit } from "react-icons/fa";
-import axios from "axios";
-import { BACKEND_SALES } from '../const/backend';
+import getSales from '../helpers/getSales';
 
-// import sales from './databased/sales.json';
 
 
 export default function SalesTable() {
 
     const [dataSales, setDataSales] = useState(null)
     const [loading, setLoading] = useState(true)
-    const salesURL = BACKEND_SALES
+
 
     // useEffect para traer los datos con petición Get
-    useEffect(() => {
-        axios.get(`${salesURL}`)
-            .then(response => {
-                console.log(response.data)
-                const data = response.data
+    const updateDataSales = () => {
+        getSales()
+            .then((data) => {
                 setDataSales(data)
-                setLoading(false)
             })
-    }, [])
+    };
 
+    useEffect(() => {
+        updateDataSales();
+        setLoading(false)
+    }, [loading]);
+    
+    
     return (
         <>
             {loading ?
-                (<div class="spinner-grow spinner-grow-lg" role="status">
-                    <span class="sr-only"></span>
+                (<div className="spinner-grow spinner-grow-lg" role="status">
+                    <span className="sr-only"></span>
                 </div>) : null
 
             }
@@ -56,17 +57,17 @@ export default function SalesTable() {
                             dataSales.map(sales => (
                                 <tr key={sales._id}>
                                     <th scope="row" >{sales._id.substring(17, 24)}</th>
-                                    <td>{sales.saleDate}</td>
+                                    <td>{sales.saleDate.substring(0, 10)}</td>
                                     <td>{sales.sellerName}</td>
                                     <td>{sales.clientId}</td>
                                     <td>{sales.clientName}</td>
                                     <td>
-                                        
+
                                         {sales.sale.map(items => (
                                             <tbody>
-                                                <td scope="row">{items.productName}</td>
-                                                <td>{items.amount}</td>
-                                                <td>{items.unitPrice}</td>
+                                                <td scope="row">{items.productName}--</td>
+                                                <td>--{items.amount}--</td>
+                                                <td>--{items.unitPrice}</td>
                                             </tbody>
                                         ))}
 
@@ -74,7 +75,7 @@ export default function SalesTable() {
                                     {/* <td>{sales.productName}</td>
                                     <td>{sales.amount}</td>
                                     <td>{sales.unitPrice}</td> */}
-                                    <td>{sales.unitPrice * sales.amount}</td>
+                                    <td>{sales.totalPrice}</td>
                                     <td>{sales.saleStatus}</td>
                                     <td><Button ><FaEdit /></Button></td>
                                 </tr>

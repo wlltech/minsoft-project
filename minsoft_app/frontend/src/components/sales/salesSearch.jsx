@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Table, Button, ModalFooter, Modal, ModalHeader, ModalBody, Input } from 'reactstrap';
 import { FaSearch } from "react-icons/fa";
-import axios from "axios";
-import { BACKEND_SALES } from '../const/backend';
+import getSales from '../helpers/getSales';
 
 
 
@@ -10,18 +9,20 @@ export default function SearchSales(props) {
     const [dataSales, setDataSales] = useState(null)
     const [loading, setLoading] = useState(true)
 
-    const salesURL = BACKEND_SALES
-
-
+  
     // useEffect para traer los datos con petición Get
-    useEffect(() => {
-        axios.get(`${salesURL}`)
-            .then(response => {
-                const data = response.data
+
+    const updateDataSales = () => {
+        getSales()
+            .then((data) => {
                 setDataSales(data)
-                setLoading(false)
             })
-    }, [])
+    };
+
+    useEffect(() => {
+        updateDataSales();
+        setLoading(false)
+    }, []);
 
 
     return (

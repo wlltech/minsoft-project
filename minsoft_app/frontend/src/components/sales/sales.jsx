@@ -1,6 +1,5 @@
 import React, { useState, Fragment, useEffect } from "react";
 import './Sales.css';
-import { nanoid } from 'nanoid';
 import { Button } from 'reactstrap';
 import { FaEdit } from "react-icons/fa";
 import SearchSales from './salesSearch.jsx';
@@ -9,33 +8,6 @@ import SalesTable from "./saleListAndEditStatus";
 
 
 
-const salesTest = [
-  {
-    "idSale": nanoid(),
-    "totalPrice": 0,
-    "idProduct": 1,
-    "amount": 2,
-    "unitPrice": 5000,
-    "saleDate": "02/05/2020",
-    "clientId": "1101321054",
-    "clientName": "Juan",
-    "sellerName": "Juana la Loca",
-    "saleStatus": "Despachada",
-    "productName": "Cafe Late"
-  },
-  {
-    "idSale": nanoid(),
-    "totalPrice": 0,
-    "idProduct": 2,
-    "amount": 3,
-    "unitPrice": 10000,
-    "saleDate": "02/05/2020",
-    "clientId": "1101321054",
-    "clientName": "Miguel",
-    "sellerName": "Margaret Tatcher",
-    "saleStatus": "En Proceso",
-    "productName": "Cafe Campesino"
-  }]
 
 const productsTesting = [
   {
@@ -59,16 +31,25 @@ export default function Sales() {
 
 
   // variable de prueba para modificar datos de venta
-  let salesModif = salesTest;
+ 
 
   //funciones para agregar venta (ingresan como props al addSale)
-  const [dataSales, setDataSale] = useState(salesModif)  //useState para los datos
+  // const [dataSales, setDataSale] = useState({})  //useState para los datos
+  // const [productsToSale, setProductsToSale] = useState([])
 
-  const addSale = (dataSale) => {       //agrega datos al estado
-    dataSale.idSale = nanoid();
-    setDataSale([...dataSales, dataSale]
-    )
-  }
+  // const addSale = (dataSale) => { 
+  //      //agrega datos al estado
+  //   setDataSale({...dataSales, dataSale, sale:productsToSale}
+  //   )
+  //   console.log(dataSales)
+  // }
+
+  // const addProductsToSale = (products) => {
+  //   setProductsToSale([...productsToSale, products]
+  //     )
+  //   console.log(productsToSale)
+  // }
+
   //funcion para renderizar listado de ventas 
   const [listSales, setListSales] = useState(false)
 
@@ -116,7 +97,8 @@ export default function Sales() {
       </div>
       <div>
         {newSale ? (<div className="container mt-2">
-          <AddSale addSale={addSale} key={dataSales.idSale} />
+          <AddSale />
+          {/* addSale={addSale} addProductsToSale={addProductsToSale} */}
         </div>) : ((<div></div>))}
       </div>
       {/* Renderizar Listado de Ventas */}
