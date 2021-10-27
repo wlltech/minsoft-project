@@ -56,7 +56,7 @@ const handleInputChange = (event) => {
         ...dataSales, [name]: value})
 }
 
-const onSubmit = (event) => {
+const onSubmit = async (event) => {
     event.preventDefault()
     console.log(productsToSale)
     const newSale = {
@@ -68,9 +68,11 @@ const onSubmit = (event) => {
         "sellerName": dataSales.sellerName,
         "totalPrice":5000,
     }
-    const venta = setDataSales(newSale)
+    setDataSales(newSale)
     alert("Venta agregada exitosamente")
-    console.log(venta)
+    
+    await saveSale(dataSales)
+
     event.target.reset()
 }
 
